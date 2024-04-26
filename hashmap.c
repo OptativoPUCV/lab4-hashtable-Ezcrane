@@ -91,7 +91,14 @@ Pair * searchMap(HashMap * map,  char * key)
 {   
   for(int i = 0; i < map->capacity; i++)
     {
-      if(map->buckets[i] != NULL && map->buckets[i]->key != NULL)return map->buckets[i];
+      if(map->buckets[i] != NULL && map->buckets[i]->key != NULL)
+      {
+        if(is_equal(map->buckets[i]->key, key))
+        {
+          map->current = i;
+          return map->buckets[i];
+        }
+      }
       else return NULL;
     }
   return NULL;
