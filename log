@@ -48,3 +48,23 @@ Fri 26 Apr 2024 07:39:54 PM UTC:
  tests:  7|4
 total_score: 30/70
 4aefe2e
+Fri 26 Apr 2024 07:52:04 PM UTC: 
+ hashmap.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:95:50: error: expected ‘)’ before ‘{’ token
+   95 |     if(is_equal(map->buckets[posicion]->key, key)
+      |       ~                                          ^
+      |                                                  )
+   96 |     {
+      |     ~                                             
+hashmap.c:107:3: error: expected expression before ‘}’ token
+  107 |   }
+      |   ^
+hashmap.c:109:1: error: control reaches end of non-void function [-Werror=return-type]
+  109 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+4805b12
