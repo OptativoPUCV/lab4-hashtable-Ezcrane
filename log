@@ -1,0 +1,21 @@
+Fri 26 Apr 2024 07:10:54 PM UTC: 
+ hashmap.c | 72 +++++++++++++++++++++++++++++++++++++++++++++------------------
+ 1 file changed, 52 insertions(+), 20 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:77:57: error: expected ‘)’ before ‘;’ token
+   77 |   map->buckets = (Pair **)calloc(capacity, sizeof(Pair*);
+      |                                 ~                       ^
+      |                                                         )
+hashmap.c:82:14: error: expected ‘;’ before ‘}’ token
+   82 |   return map;
+      |              ^
+      |              ;
+   83 | }
+      | ~             
+hashmap.c:83:1: error: control reaches end of non-void function [-Werror=return-type]
+   83 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+341e385
