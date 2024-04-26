@@ -104,3 +104,9 @@ hashmap.c:114:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 21bedea
+Fri 26 Apr 2024 08:12:23 PM UTC: 
+ hashmap.c | 17 +++--------------
+ 1 file changed, 3 insertions(+), 14 deletions(-)
+ tests:  9|3
+total_score: 40/70
+b3b1754
