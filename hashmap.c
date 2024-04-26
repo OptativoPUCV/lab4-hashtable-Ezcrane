@@ -104,8 +104,7 @@ Pair * searchMap(HashMap * map,  char * key)
 
 Pair * firstMap(HashMap * map) 
 {
-  if(map->buckets[0] != NULL && map->buckets[0]->key != NULL) return map->buckets[0];
-  else return NULL;
+  return map->buckets[0];
 }
 
 Pair * nextMap(HashMap * map) 
