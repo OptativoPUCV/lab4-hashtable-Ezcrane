@@ -134,3 +134,22 @@ Fri 26 Apr 2024 08:26:46 PM UTC:
  tests:  12|2
 total_score: 50/70
 d2535a5
+Fri 26 Apr 2024 08:41:03 PM UTC: 
+ hashmap.c | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:68:27: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘capac’; did you mean ‘capacity’?
+   68 |   int old_capacity = map->capac;
+      |                           ^~~~~
+      |                           capacity
+hashmap.c:70:8: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘capac’; did you mean ‘capacity’?
+   70 |   map->capac = 2 * old_capacity;
+      |        ^~~~~
+      |        capacity
+hashmap.c:71:38: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘capac’; did you mean ‘capacity’?
+   71 |   map->buckets = (Pair**)calloc(map->capac, sizeof(Pair*));
+      |                                      ^~~~~
+      |                                      capacity
+Compilation failed
+8174975
